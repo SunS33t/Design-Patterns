@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.FactoryTask.Car;
+import com.company.FactoryTask.Motorcycle;
 import com.company.SingletonTask.Singleton;
 
 import java.util.Arrays;
@@ -20,7 +21,8 @@ public class Main {
 
 		//-----------------Singleton end-----------------------
 		//-----------------Factory start-----------------------
-		Car car = new Car("Landa",0);
+			//Car methods check
+		Car car = new Car("Landa",2);
 		System.out.println("Mark name is " + car.getMark());
 		car.addModel("Priora",500);
 		car.addModel("Granta",600);
@@ -39,7 +41,24 @@ public class Main {
 		System.out.println("Models names array after delete priora is " + Arrays.toString(car.getModelNamesArray()));
 		car.setModelName("2108","vosmyorka");
 		System.out.println("Models array after change model name: " + Arrays.toString(car.getModelNamesArray()));
-
+			//Car methods check end
+			//Motorcycle methods check
+		System.out.println("-------------------------------");
+		Motorcycle motorcycle = new Motorcycle("Yamaha",2);
+		System.out.println("Models names array is " + Arrays.toString(motorcycle.getModelNames()));
+		motorcycle.addModel("test3",400);
+		System.out.println("Updated models names array is " + Arrays.toString(motorcycle.getModelNames()));
+		System.out.println("Test3 price is: " +  motorcycle.getPriceByName("test3"));
+		motorcycle.setPriceByName("test3",555);
+		System.out.println("Test3 new price is: " + motorcycle.getPriceByName("test3"));
+		System.out.println("Price array is: " + Arrays.toString(motorcycle.getModelPriceArray()));
+		System.out.println("Motorcycle array size is: " + motorcycle.getSize());
+		motorcycle.deleteModel("test3", 555);
+		System.out.println("Models names array after delete test3 is " + Arrays.toString(motorcycle.getModelNames()));
+		motorcycle.setModelName("TestModel_1","TestModel_0");
+		System.out.println("Models array after change model name: " + Arrays.toString(motorcycle.getModelNames()));
+		System.out.println("-------------------------------");
+			//Motorcycle methods check end
 
 		//------------------Factory end------------------------
     }

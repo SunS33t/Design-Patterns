@@ -1,5 +1,9 @@
 package com.company.FactoryTask;
 
+import com.company.FactoryTask.Exceptions.DuplicateModelNameException;
+import com.company.FactoryTask.Exceptions.ModelPriceOutOfBoundsException;
+import com.company.FactoryTask.Exceptions.NoSuchModelNameException;
+
 import java.util.Objects;
 
 public class Motorcycle {
@@ -16,6 +20,7 @@ public class Motorcycle {
             this.price = price;
         }
     }
+    private static final double DEFAULT_PRICE = 100;
     String name = null;
     private Model head = new Model();
     {
@@ -26,11 +31,24 @@ public class Motorcycle {
 
     public Motorcycle(String name, int modelCount){
         this.name = name;
+        for(int i = 0; i < modelCount; i++){
+            try{
+                addModel("TestModel_" + (i + 1), DEFAULT_PRICE);
+            }
+            catch (DuplicateModelNameException e){
+                e.printStackTrace();
+            }
+        }
         this.size = modelCount;
     }
 
-    public void setModelName(String oldName, String newName){
-        //no such model
+    public void setModelName(String oldName, String newName) throws NoSuchModelNameException, DuplicateModelNameException {
+        if(getModelByName(oldName) == null){
+            throw new NoSuchModelNameException(oldName);
+        }
+        if(getModelByName(newName) != null){
+            throw new DuplicateModelNameException(newName);
+        }
         getModelByName(oldName).name = newName;
     }
 
@@ -46,14 +64,21 @@ public class Motorcycle {
         return resArray;
     }
 
-    public double getPriceByName(String name){
-        // no such model
+    public double getPriceByName(String name) throws NoSuchModelNameException {
+        if(getModelByName(name) == null){
+            throw new NoSuchModelNameException(name);
+        }
         return getModelByName(name).price;
     }
 
-    public void setPriceByName(String name, double price){
-        //no such model
-        getModelByName(name).price = price;
+    public void setPriceByName(String name, double price) throws NoSuchModelNameException {
+       if(price < 0){
+           throw new ModelPriceOutOfBoundsException();
+       }
+       if(getModelByName(name) == null){
+           throw new NoSuchModelNameException(name);
+       }
+       getModelByName(name).price = price;
     }
 
     public double[] getModelPriceArray(){
@@ -68,7 +93,13 @@ public class Motorcycle {
         return resArray;
     }
 
-    public void addModel(String name, double price){
+    public void addModel(String name, double price) throws DuplicateModelNameException {
+        if(price < 0){
+            throw new ModelPriceOutOfBoundsException();
+        }
+        if(getModelByName(name) != null) {
+            throw new DuplicateModelNameException(name);
+        }
         Model newModel = new Model(name, price);
         head.prev.next = newModel;
         newModel.prev = head.prev;
@@ -77,9 +108,11 @@ public class Motorcycle {
         this.size++;
     }
 
-    public void deleteModel(String name, double price){
-        // no such model
+    public void deleteModel(String name, double price) throws NoSuchModelNameException {
         Model modelToDelete = getModelByNameAndPrice(name,price);
+        if(modelToDelete == null){
+            throw new NoSuchModelNameException(name);
+        }
         modelToDelete.next.prev = modelToDelete.prev;
         modelToDelete.prev.next = modelToDelete.next;
         modelToDelete.next = null;
@@ -91,7 +124,6 @@ public class Motorcycle {
     }
 
     private Model getModelByName(String name){
-        // no such model
         Model pointer = head.next;
         while(pointer != head){
             if(Objects.equals(pointer.name, name))
@@ -102,7 +134,6 @@ public class Motorcycle {
     }
 
     private Model getModelByNameAndPrice(String name, double price){
-        // no such model
         Model pointer = head.next;
         while(pointer != head){
             if(Objects.equals(pointer.name, name) && pointer.price == price)
@@ -111,6 +142,4 @@ public class Motorcycle {
         }
         return null;
     }
-
-
 }
