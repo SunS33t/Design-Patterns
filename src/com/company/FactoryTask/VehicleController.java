@@ -28,7 +28,7 @@ public class VehicleController {
     }
     public static double getAveragePrice(Vehicle m){
         double[] arr = m.getModelPriceArray();
-        return Arrays.stream(arr).sum();
+        return Arrays.stream(arr).sum() / m.getModelsArraySize();
     }
     public static void printModelsNames(Vehicle m){
         String[] arr =  m.getModelNames();

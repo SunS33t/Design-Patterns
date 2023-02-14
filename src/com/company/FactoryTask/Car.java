@@ -1,15 +1,12 @@
 package com.company.FactoryTask;
 
-import com.company.FactoryTask.Exceptions.DuplicateModelNameException;
-import com.company.FactoryTask.Exceptions.ModelPriceOutOfBoundsException;
-import com.company.FactoryTask.Exceptions.NoSuchModelNameException;
+import com.company.FactoryTask.Exceptions.*;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class Car implements Vehicle {
+public class Car implements Vehicle, Cloneable {
     private class Model{
         private String modelName;
         private double price;
@@ -94,10 +91,8 @@ public class Car implements Vehicle {
             throw new NoSuchModelNameException(name);
         }
         int index = indexOfModel(name, price);
-        Model[] resultArray =  new Model[modelsArray.length - 1];
-        System.arraycopy(modelsArray, 0, resultArray, 0, index);
-        System.arraycopy(modelsArray,index + 1,resultArray,index,modelsArray.length - index - 1);
-        this.modelsArray = resultArray;
+        System.arraycopy(modelsArray, index + 1, modelsArray, index, modelsArray.length - index - 1);
+        modelsArray = Arrays.copyOf(modelsArray,modelsArray.length - 1);
     }
     public int getModelsArraySize(){
         return modelsArray.length;
@@ -117,19 +112,12 @@ public class Car implements Vehicle {
         return -1;
     }
     @Override
-    public Object clone() {
-        Car result = null;
-        try{
-            result = (Car) super.clone();
-            result.modelsArray = this.modelsArray.clone();
-            for(int i = 0; i < getModelsArraySize(); i++){
-                result.modelsArray[i] = new Model(modelsArray[i].modelName, modelsArray[i].price);
-            }
-        }
-        catch (CloneNotSupportedException e){
-
+    public Object clone() throws CloneNotSupportedException {
+        Car result = (Car)super.clone();
+        result.modelsArray = this.modelsArray.clone();
+        for(int i = 0; i < getModelsArraySize(); i++){
+            result.modelsArray[i] = new Model(modelsArray[i].modelName, modelsArray[i].price);
         }
         return result;
     }
-
 }

@@ -1,12 +1,10 @@
 package com.company.FactoryTask;
 
-import com.company.FactoryTask.Exceptions.DuplicateModelNameException;
-import com.company.FactoryTask.Exceptions.ModelPriceOutOfBoundsException;
-import com.company.FactoryTask.Exceptions.NoSuchModelNameException;
+import com.company.FactoryTask.Exceptions.*;
 
 import java.util.Objects;
 
-public class Motorcycle implements Vehicle {
+public class Motorcycle implements Vehicle, Cloneable {
     private class Model{
         String name = null;
         double price = Double.NaN;
@@ -150,25 +148,20 @@ public class Motorcycle implements Vehicle {
         return null;
     }
     @Override
-    public Object clone() {
-        Motorcycle result = null;
-        try{
-            result = (Motorcycle) super.clone();
-            result.head = new Model();
-            result.head.next = result.head;
-            result.head.prev = result.head;
-            for(Model m = head.next; m != head; m = m.next){
-                Model add = new Model();
-                add.name = m.name;
-                add.price = m.price;
-                add.prev = result.head.prev;
-                result.head.prev.next = add;
-                add.next = result.head;
-                result.head.prev = add;
-            }
-            return result;
+    public Object clone() throws CloneNotSupportedException {
+        Motorcycle result = (Motorcycle) super.clone();
+        result.head = new Model();
+        result.head.next = result.head;
+        result.head.prev = result.head;
+        for(Model m = head.next; m != head; m = m.next){
+            Model add = new Model();
+            add.name = m.name;
+            add.price = m.price;
+            add.prev = result.head.prev;
+            result.head.prev.next = add;
+            add.next = result.head;
+            result.head.prev = add;
         }
-        catch (CloneNotSupportedException e ){}
         return result;
     }
 }

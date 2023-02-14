@@ -14,18 +14,15 @@ public class Singleton {
         try (InputStream input = new FileInputStream("src/com/company/config.properties")) {
             prop.load(input);
             singletonData = prop;
-
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
-
     public static synchronized Singleton getInstance(){
         if(_singleton_instance == null)
             _singleton_instance = new Singleton();
         return _singleton_instance;
     }
-
     public Properties getProperties(){
         return singletonData;
     }

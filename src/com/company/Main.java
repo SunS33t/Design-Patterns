@@ -30,7 +30,7 @@ public class Main {
 		Car car = new Car("Landa",2);
 		System.out.println("Mark name is " + car.getMark());
 		car.addModel("Priora",500);
-		car.addModel("Granta",600);
+		car.addModel("Granta",603);
 		car.addModel("Kalina",550);
 		car.addModel("Vesta",700);
 		car.addModel("2108",200);
@@ -73,18 +73,29 @@ public class Main {
 			//Factory method check
 		VehicleController.setTransportFactory(TransportType.CAR);
 		Vehicle probablyACar = VehicleController.createInstance("BMW",3);
-		VehicleController.printModelsNames(probablyACar);
+		System.out.println(probablyACar.getClass().toString());
 
 		VehicleController.setTransportFactory(TransportType.MOTORCYCLE);
 		Vehicle probablyAMotorcycle = VehicleController.createInstance("Harley-Davidson",3);
-		VehicleController.printModelsNames(probablyAMotorcycle);
+		System.out.println(probablyAMotorcycle.getClass().toString());
 			//Factory method check end
 		System.out.println("\u001B[32m" + "-------------------------------" + "\u001B[0m");
 		//------------------Factory end------------------------
 		//-----------------Prototype start---------------------
 		System.out.println("\u001B[32m" + "--------Prototype-----------" + "\u001B[0m");
+		Car carClone = (Car) car.clone();
+		car.setModelName("Kalina","Kalimalina");
+		System.out.println("Car: ");
+		VehicleController.printModelsNamesAndPrices(car);
+		System.out.println("CarClone: ");
+		VehicleController.printModelsNamesAndPrices(carClone);
 
-
+		Motorcycle motoClone = (Motorcycle) motorcycle.clone();
+		motorcycle.setModelName("MotorcycleTestModel_2","moto_2");
+		System.out.println("Moto: ");
+		VehicleController.printModelsNamesAndPrices(motorcycle);
+		System.out.println("Cloned moto: ");
+		VehicleController.printModelsNamesAndPrices(motoClone);
 
 		System.out.println("\u001B[32m" + "-------------------------------" + "\u001B[0m");
 		//-----------------Prototype end-----------------------
