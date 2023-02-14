@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa4dd226-c3fa-4263-9e35-94a7876a7554" name="Default Changelist" comment="add exceptions, Motorcycle methods check.">
-      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car$Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car$Model.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Enums/TransportType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Factory/CarFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Factory/MotorcycleFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Factory/TransportFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/VehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Motorcycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Motorcycle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Motorcycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -78,7 +90,8 @@
       <updated>1675755731449</updated>
       <workItem from="1675885536865" duration="20000" />
       <workItem from="1675885569708" duration="16217000" />
-      <workItem from="1676105773396" duration="7191000" />
+      <workItem from="1676105773396" duration="11233000" />
+      <workItem from="1676240284014" duration="7418000" />
     </task>
     <task id="LOCAL-00001" summary="add some function to Car class, add tests for car. Add Motorcycle class.">
       <created>1675973912210</created>
@@ -101,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676124395773</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add exceptions, Motorcycle methods check.">
+      <created>1676124722189</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676124722189</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

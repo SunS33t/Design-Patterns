@@ -6,7 +6,7 @@ import com.company.FactoryTask.Exceptions.NoSuchModelNameException;
 
 import java.util.Objects;
 
-public class Motorcycle {
+public class Motorcycle implements Vehicle {
     private class Model{
         String name = null;
         double price = Double.NaN;
@@ -21,7 +21,7 @@ public class Motorcycle {
         }
     }
     private static final double DEFAULT_PRICE = 100;
-    String name = null;
+    private String mark = null;
     private Model head = new Model();
     {
         head.prev = head;
@@ -29,11 +29,18 @@ public class Motorcycle {
     }
     private int size = 0;
 
-    public Motorcycle(String name, int modelCount){
-        this.name = name;
+    public String getMark(){
+        return this.mark;
+    }
+    public void setMark(String mark){
+        this.mark = mark;
+    }
+
+    public Motorcycle(String mark, int modelCount){
+        this.mark = mark;
         for(int i = 0; i < modelCount; i++){
             try{
-                addModel("TestModel_" + (i + 1), DEFAULT_PRICE);
+                addModel("MotorcycleTestModel_" + (i + 1), DEFAULT_PRICE);
             }
             catch (DuplicateModelNameException e){
                 e.printStackTrace();
@@ -119,7 +126,7 @@ public class Motorcycle {
         modelToDelete.prev = null;
         this.size--;
     }
-    public int getSize(){
+    public int getModelsArraySize(){
         return this.size;
     }
 
@@ -141,5 +148,27 @@ public class Motorcycle {
             pointer = pointer.next;
         }
         return null;
+    }
+    @Override
+    public Object clone() {
+        Motorcycle result = null;
+        try{
+            result = (Motorcycle) super.clone();
+            result.head = new Model();
+            result.head.next = result.head;
+            result.head.prev = result.head;
+            for(Model m = head.next; m != head; m = m.next){
+                Model add = new Model();
+                add.name = m.name;
+                add.price = m.price;
+                add.prev = result.head.prev;
+                result.head.prev.next = add;
+                add.next = result.head;
+                result.head.prev = add;
+            }
+            return result;
+        }
+        catch (CloneNotSupportedException e ){}
+        return result;
     }
 }

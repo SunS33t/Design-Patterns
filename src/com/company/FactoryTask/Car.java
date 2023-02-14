@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class Car {
+public class Car implements Vehicle {
     private class Model{
         private String modelName;
         private double price;
@@ -39,7 +39,7 @@ public class Car {
         this.mark = markName;
         this.modelsArray = new Model[arraySize];
         for(int i = 0; i < arraySize; i++){
-            modelsArray[i] = new Model("TestModel_" + (i + 1), DEFAULT_PRICE);
+            modelsArray[i] = new Model("CarTestModel_" + (i + 1), DEFAULT_PRICE);
         }
     }
     public String getMark(){
@@ -57,16 +57,16 @@ public class Car {
         }
         Stream.of(modelsArray).filter(model -> Objects.equals(model.getModelName(), oldName)).findFirst().get().setModelName(newName);
     }
-    public String[] getModelNamesArray(){
+    public String[] getModelNames(){
         return  Arrays.stream(modelsArray).map(Model::getModelName).toArray(String[]::new);
     }
-    public double getPriceByModelName(String name) throws NoSuchModelNameException {
+    public double getPriceByName(String name) throws NoSuchModelNameException {
         if(indexOfModel(name) < 0){
             throw new NoSuchModelNameException(name);
         }
         return Stream.of(modelsArray).filter(model -> Objects.equals(model.getModelName(), name)).findFirst().get().getPrice();
     }
-    public void setPriceByModelName(String name, double price) throws NoSuchModelNameException {
+    public void setPriceByName(String name, double price) throws NoSuchModelNameException {
         if(price < 0){
             throw new ModelPriceOutOfBoundsException();
         }
@@ -88,7 +88,8 @@ public class Car {
         modelsArray = Arrays.copyOf(modelsArray,modelsArray.length + 1);
         modelsArray[modelsArray.length - 1] = new Model(name,price);
     }
-    public void deleteModel(String name, int price) throws Exception {
+
+    public void deleteModel(String name, double price) throws NoSuchModelNameException {
         if(indexOfModel(name,price) < 0){
             throw new NoSuchModelNameException(name);
         }
@@ -115,4 +116,20 @@ public class Car {
         }
         return -1;
     }
+    @Override
+    public Object clone() {
+        Car result = null;
+        try{
+            result = (Car) super.clone();
+            result.modelsArray = this.modelsArray.clone();
+            for(int i = 0; i < getModelsArraySize(); i++){
+                result.modelsArray[i] = new Model(modelsArray[i].modelName, modelsArray[i].price);
+            }
+        }
+        catch (CloneNotSupportedException e){
+
+        }
+        return result;
+    }
+
 }
