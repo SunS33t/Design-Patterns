@@ -1,12 +1,15 @@
 package com.company;
 
-import com.company.FactoryTask.Car;
-import com.company.FactoryTask.Enums.TransportType;
-import com.company.FactoryTask.Motorcycle;
-import com.company.FactoryTask.Vehicle;
-import com.company.FactoryTask.VehicleController;
-import com.company.SingletonTask.Singleton;
+import com.company.AdapterPattern.Adapter;
+import com.company.FactoryPattern.Car;
+import com.company.FactoryPattern.Enums.TransportType;
+import com.company.FactoryPattern.Motorcycle;
+import com.company.FactoryPattern.Vehicle;
+import com.company.FactoryPattern.VehicleController;
+import com.company.SingletonPattern.Singleton;
 
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
 import java.util.Arrays;
 
 public class Main {
@@ -99,5 +102,11 @@ public class Main {
 
 		System.out.println("\u001B[32m" + "-------------------------------" + "\u001B[0m");
 		//-----------------Prototype end-----------------------
+
+  		//Lab2
+		System.out.println("\u001B[32m" + "--------Adapter-----------" + "\u001B[0m");
+		OutputStream os = Adapter.stringArrayToOutputStream(new String[] {"den","men","sen"});
+		System.out.println(os);
+		System.out.println(Arrays.toString(Adapter.outputStreamToStringArray(os)));
     }
 }

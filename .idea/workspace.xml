@@ -2,17 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa4dd226-c3fa-4263-9e35-94a7876a7554" name="Default Changelist" comment="add exceptions, Motorcycle methods check.">
+      <change afterPath="$PROJECT_DIR$/src/com/company/AdapterPattern/Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Truck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Motorcycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Motorcycle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car$Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Enums/TransportType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Exceptions/DuplicateModelNameException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Exceptions/ModelPriceOutOfBoundsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Exceptions/NoSuchModelNameException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Factory/CarFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Factory/MotorcycleFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Factory/TransportFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Motorcycle$Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Motorcycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryTask/VehicleController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/Motorcycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryTask/VehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/SingletonTask/Singleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Enums/TransportType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Enums/TransportType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Exceptions/DuplicateModelNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Exceptions/DuplicateModelNameException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Exceptions/ModelPriceOutOfBoundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Exceptions/ModelPriceOutOfBoundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Exceptions/NoSuchModelNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Exceptions/NoSuchModelNameException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Factory/CarFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Factory/CarFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Factory/MotorcycleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Factory/MotorcycleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Factory/TransportFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Factory/TransportFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Motorcycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryTask/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/VehicleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/SingletonTask/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SingletonTask/Singleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SingletonTask/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SingletonPattern/Singleton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,6 +112,8 @@
       <workItem from="1676105773396" duration="11233000" />
       <workItem from="1676240284014" duration="7418000" />
       <workItem from="1676367432871" duration="4188000" />
+      <workItem from="1676560132554" duration="4544000" />
+      <workItem from="1676878587165" duration="4958000" />
     </task>
     <task id="LOCAL-00001" summary="add some function to Car class, add tests for car. Add Motorcycle class.">
       <created>1675973912210</created>
