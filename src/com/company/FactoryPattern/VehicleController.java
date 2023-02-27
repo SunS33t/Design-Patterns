@@ -12,8 +12,7 @@ public class VehicleController {
     private static TransportFactory factory = new CarFactory();
 
     public synchronized Vehicle synchronizedTransport(Vehicle v){
-
-        return factory.createInstance("volve",2);
+        return new SynchronizedTransport(v);
     }
 
     public static void setTransportFactory(TransportType type){

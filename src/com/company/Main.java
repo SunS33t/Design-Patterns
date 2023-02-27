@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.AdapterPattern.Adapter;
+import com.company.FacadePattern.TrafficController;
 import com.company.FactoryPattern.Car;
 import com.company.FactoryPattern.Enums.TransportType;
 import com.company.FactoryPattern.Motorcycle;
@@ -8,7 +9,6 @@ import com.company.FactoryPattern.Vehicle;
 import com.company.FactoryPattern.VehicleController;
 import com.company.SingletonPattern.Singleton;
 
-import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.util.Arrays;
 
@@ -108,5 +108,12 @@ public class Main {
 		OutputStream os = Adapter.stringArrayToOutputStream(new String[] {"den","men","sen"});
 		System.out.println(os);
 		System.out.println(Arrays.toString(Adapter.outputStreamToStringArray(os)));
+		System.out.println("\u001B[32m" + "-------------------------------" + "\u001B[0m");
+
+		System.out.println("\u001B[32m" + "--------Facade-----------" + "\u001B[0m");
+
+
+		TrafficController tc = new TrafficController();
+		tc.start();
     }
 }
