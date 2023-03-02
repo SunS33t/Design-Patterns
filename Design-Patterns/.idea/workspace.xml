@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa4dd226-c3fa-4263-9e35-94a7876a7554" name="Default Changelist" comment="add exceptions, Motorcycle methods check.">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Assets/Car_Icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/FacadePattern/TrafficController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/SynchronizedTransport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryPattern/VehicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/FactoryPattern/VehicleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PatternsLab1/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryPattern/Truck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/FactoryPattern/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/FactoryPattern/VehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +30,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/denis/Desktop/Design patterns labs/Design-Patterns/src/com/company/Assets"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denis/Desktop/Design patterns labs/Design-Patterns&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\denis\Desktop\Design patterns labs\Design-Patterns\src\com\company\Assets" />
@@ -101,6 +94,13 @@
       <workItem from="1676560132554" duration="4544000" />
       <workItem from="1676878587165" duration="4958000" />
       <workItem from="1677325254468" duration="39868000" />
+      <workItem from="1677562440937" duration="3595000" />
+      <workItem from="1677706942704" duration="647000" />
+      <workItem from="1677707846591" duration="26000" />
+      <workItem from="1677707885703" duration="8000" />
+      <workItem from="1677707900776" duration="14000" />
+      <workItem from="1677708872889" duration="136000" />
+      <workItem from="1677712420270" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="add some function to Car class, add tests for car. Add Motorcycle class.">
       <created>1675973912210</created>
