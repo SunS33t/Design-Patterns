@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa4dd226-c3fa-4263-9e35-94a7876a7554" name="Default Changelist" comment="add exceptions, Motorcycle methods check.">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,12 +20,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2LOx3ZvRTeS5RKqPEChzf9WnnPD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,6 +102,9 @@
       <workItem from="1677707900776" duration="14000" />
       <workItem from="1677708872889" duration="136000" />
       <workItem from="1677712420270" duration="627000" />
+      <workItem from="1677746368861" duration="11000" />
+      <workItem from="1677767900485" duration="147000" />
+      <workItem from="1677768065801" duration="1760000" />
     </task>
     <task id="LOCAL-00001" summary="add some function to Car class, add tests for car. Add Motorcycle class.">
       <created>1675973912210</created>
