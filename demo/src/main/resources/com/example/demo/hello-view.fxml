@@ -27,7 +27,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField fx:id="numberInput" layoutX="688.0" layoutY="496.0" onAction="#addButtonPushed" prefHeight="25.0" prefWidth="79.0" promptText="X value" />
+      <TextField fx:id="numberInput" layoutX="688.0" layoutY="496.0" onAction="#addButtonPushed" onKeyPressed="#onKeyPressed" prefHeight="25.0" prefWidth="79.0" promptText="X value" />
       <Button layoutX="788.0" layoutY="496.0" mnemonicParsing="false" onAction="#addButtonPushed" text="Add" />
    </children>
 </AnchorPane>
