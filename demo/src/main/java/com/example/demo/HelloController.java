@@ -11,10 +11,8 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.util.StringConverter;
-import org.controlsfx.control.PropertySheet;
 
 import java.net.URL;
 import java.util.Comparator;
@@ -132,13 +130,10 @@ public class HelloController implements Initializable {
 
     public void onKeyPressed(KeyEvent event){
         char[] input = event.getCode().getChar().toCharArray();
-        System.out.println(input[0]);
         if(Character.isDigit(input[0])){
-            System.out.println(input[0]);
             event.consume();
         }
         else{
         }
     }
-
 }

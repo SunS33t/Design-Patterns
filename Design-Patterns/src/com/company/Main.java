@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.AdapterPattern.Adapter;
+import com.company.DaoPattern.CarDao;
 import com.company.FacadePattern.TrafficController;
 import com.company.FactoryPattern.Car;
 import com.company.FactoryPattern.Enums.TransportType;
@@ -113,7 +114,16 @@ public class Main {
 		System.out.println("\u001B[32m" + "--------Facade-----------" + "\u001B[0m");
 
 
-		TrafficController tc = new TrafficController();
-		tc.start();
+		// TrafficController tc = new TrafficController();
+		// tc.start();
+
+		Car carFromFile = CarDao.getCarFromTextFile("src/com/company/Assets/daoFiles/carInfo.txt");
+		System.out.println(carFromFile.getMark());
+		VehicleController.printModelsNamesAndPrices(carFromFile);
+
+		CarDao.serializeCarIntoFile(carFromFile);
+		carFromFile = CarDao.getCarFromSerializeFile("src/com/company/Assets/daoFiles/Subaru_info");
+		VehicleController.printModelsNamesAndPrices(carFromFile);
+		CarDao.createTextFileFromCar(car);
     }
 }

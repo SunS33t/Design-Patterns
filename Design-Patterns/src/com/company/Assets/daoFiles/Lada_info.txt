@@ -1,0 +1,1 @@
+Lada;6;CarTestModel_1;100.0;CarTestModel_2;100.0;Granta;603.0;Kalimalina;550.0;Vesta;700.0;vosmyorka;200.0;

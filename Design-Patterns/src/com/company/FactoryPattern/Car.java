@@ -2,12 +2,13 @@ package com.company.FactoryPattern;
 
 import com.company.FactoryPattern.Exceptions.*;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-public class Car implements Vehicle, Cloneable {
-    private class Model{
+public class Car implements Vehicle, Cloneable, Serializable {
+    private class Model implements Serializable{
         private String modelName;
         private double price;
 
