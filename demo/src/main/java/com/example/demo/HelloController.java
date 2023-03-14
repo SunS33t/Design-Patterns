@@ -43,7 +43,6 @@ public class HelloController implements Initializable {
                     });
                     lineChart.getData().remove(0);
                     lineChart.getData().add(series);
-                    System.out.println();
                 }
             }
         });

@@ -2,10 +2,11 @@ package com.company.FactoryPattern;
 
 import com.company.FactoryPattern.Exceptions.*;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Motorcycle implements Vehicle, Cloneable {
-    private class Model{
+public class Motorcycle implements Vehicle, Cloneable,Serializable {
+    private class Model implements Serializable{
         String name = null;
         double price = Double.NaN;
         Model prev = null;

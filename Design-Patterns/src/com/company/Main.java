@@ -1,7 +1,9 @@
 package com.company;
 
 import com.company.AdapterPattern.Adapter;
+import com.company.DaoPattern.BinaryFileDAO;
 import com.company.DaoPattern.CarDao;
+import com.company.DaoPattern.TextFileDAO;
 import com.company.FacadePattern.TrafficController;
 import com.company.FactoryPattern.Car;
 import com.company.FactoryPattern.Enums.TransportType;
@@ -117,13 +119,16 @@ public class Main {
 		// TrafficController tc = new TrafficController();
 		// tc.start();
 
-		Car carFromFile = CarDao.getCarFromTextFile("src/com/company/Assets/daoFiles/carInfo.txt");
-		System.out.println(carFromFile.getMark());
-		VehicleController.printModelsNamesAndPrices(carFromFile);
+		TextFileDAO tf = new TextFileDAO();
+		BinaryFileDAO bf = new BinaryFileDAO();
 
-		CarDao.serializeCarIntoFile(carFromFile);
-		carFromFile = CarDao.getCarFromSerializeFile("src/com/company/Assets/daoFiles/Subaru_info");
-		VehicleController.printModelsNamesAndPrices(carFromFile);
-		CarDao.createTextFileFromCar(car);
+		Car carText = (Car) tf.readFromFile("src/com/company/Assets/daoFiles/carInfo.txt");
+		tf.writeInFile(car);
+		VehicleController.printModelsNamesAndPrices(carText);
+
+		bf.writeInFile(carText);
+		carText =  (Car) bf.readFromFile("src/com/company/Assets/daoFiles/Subaru_info");
+		VehicleController.printModelsNamesAndPrices(carText);
+		
     }
 }
