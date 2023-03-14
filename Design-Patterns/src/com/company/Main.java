@@ -1,8 +1,9 @@
 package com.company;
 
 import com.company.AdapterPattern.Adapter;
+import com.company.ChainOfResponsobilityPattern.InLineHandler;
+import com.company.ChainOfResponsobilityPattern.MultiLineHandler;
 import com.company.DaoPattern.BinaryFileDAO;
-import com.company.DaoPattern.CarDao;
 import com.company.DaoPattern.TextFileDAO;
 import com.company.FacadePattern.TrafficController;
 import com.company.FactoryPattern.Car;
@@ -106,7 +107,7 @@ public class Main {
 		System.out.println("\u001B[32m" + "-------------------------------" + "\u001B[0m");
 		//-----------------Prototype end-----------------------
 
-  		//Lab2
+  		//Adapter pattern
 		System.out.println("\u001B[32m" + "--------Adapter-----------" + "\u001B[0m");
 		OutputStream os = Adapter.stringArrayToOutputStream(new String[] {"den","men","sen"});
 		System.out.println(os);
@@ -115,10 +116,11 @@ public class Main {
 
 		System.out.println("\u001B[32m" + "--------Facade-----------" + "\u001B[0m");
 
-
+		//Facade pattern
 		// TrafficController tc = new TrafficController();
 		// tc.start();
 
+		//DAO Pattern
 		TextFileDAO tf = new TextFileDAO();
 		BinaryFileDAO bf = new BinaryFileDAO();
 
@@ -129,6 +131,15 @@ public class Main {
 		bf.writeInFile(carText);
 		carText =  (Car) bf.readFromFile("src/com/company/Assets/daoFiles/Subaru_info");
 		VehicleController.printModelsNamesAndPrices(carText);
+
+		//Chain of responsobility pattern
+		InLineHandler inLineH = new InLineHandler();
+		MultiLineHandler mulLineH = new MultiLineHandler();
+		inLineH.setNextHandler(mulLineH);
+		mulLineH.setNextHandler(inLineH);
+
+		inLineH.vehicleToFile(carText);
+		inLineH.vehicleToFile(car);
 		
     }
 }
